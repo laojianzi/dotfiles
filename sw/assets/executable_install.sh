@@ -74,7 +74,7 @@ echo "[user]" >"$HOME"/.gitconfig_local
 echo "  name = $name" >>"$HOME"/.gitconfig_local
 echo "  email = $email" >>"$HOME"/.gitconfig_local
 
-chezmoi init git@github.com:coderabbitai/dotfiles.git
+chezmoi init git@github.com:laojianzi/dotfiles.git
 chezmoi apply -v
 
 # run autoupdate script
