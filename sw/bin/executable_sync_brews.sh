@@ -43,19 +43,12 @@ PACKAGES+=(
 	git
 	spr
 	go
-	gopls
-	gotests
-  gops
   delve
-  typescript
 	universal-ctags
 	thefuck
   tmux
   tmux-mem-cpu-load
-  node
-	python
   autopep8
-	rust
 	tilt
   ctlptl
 	bottom
@@ -96,13 +89,9 @@ PACKAGES+=(
 	markdownlint-cli2
 	yamllint
 	languagetool
-	pylint
-	eslint
 	cppcheck
 	jsonlint
 	shfmt
-	rustfmt
-	golangci-lint
 	watchman
 	cowsay
 	fortune
@@ -127,7 +116,6 @@ PACKAGES+=(
 	gping
   tty-clock
   lazydocker
-  k9s
   kustomize
   kubebuilder
   buf
@@ -277,7 +265,6 @@ if [[ $OSTYPE == 'darwin'* ]]; then
 		font-sauce-code-pro-nerd-font
     font-figtree
 		iterm2
-		notion
 		swiftdefaultappsprefpane # for setting several macOS properties such as default app for opening plaintext files
     # copyq removed as it likely has memory leak on Apple Silicon
 	)
@@ -346,6 +333,13 @@ go install github.com/davidrjenni/reftools/cmd/fillstruct@master
 go install github.com/orlangure/gocovsh@latest
 go install github.com/bufbuild/buf-language-server/cmd/bufls@latest
 go install github.com/grafana/jsonnet-language-server@latest
+go install golang.org/x/tools/gopls@latest
+go install github.com/cweill/gotests/gotests@latest
+go install github.com/fatih/gomodifytags@latest
+go install github.com/josharian/impl@latest
+go install github.com/haya14busa/goplay/cmd/goplay@latest
+go install github.com/go-delve/delve/cmd/dlv@latest
+go install honnef.co/go/tools/cmd/staticcheck@latest
 
 # on linux use system's gcc as cgo compiler as gcc@5 has some linking issues
 if [[ $OSTYPE == 'linux'* ]]; then
