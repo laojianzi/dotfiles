@@ -277,18 +277,7 @@ if [[ $OSTYPE == 'darwin'* ]]; then
 		font-sauce-code-pro-nerd-font
     font-figtree
 		iterm2
-		adobe-acrobat-reader
-		docker
-		figma
-		github
-		google-cloud-sdk
-		google-drive
-    google-chrome
 		notion
-		slack
-		stats
-		zoom
-		rectangle-pro
 		swiftdefaultappsprefpane # for setting several macOS properties such as default app for opening plaintext files
     # copyq removed as it likely has memory leak on Apple Silicon
 	)
@@ -379,11 +368,6 @@ pip3 install --quiet --upgrade pre-commit
 pip3 install --quiet pynvim
 pip3 install --quiet libtmux
 pip3 install --quiet tiktoken
-
-revolver update 'Installing gh extensions...'
-# gh extensions
-gh extension install dlvhdr/gh-dash
-gh extension install github/gh-copilot
 
 revolver stop
 tput cnorm
