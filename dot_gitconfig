@@ -39,4 +39,4 @@
 [diff "sopsdiffer"]
   textconv = sops --decrypt
 [url "ssh://git@github.com/"]
-	insteadOf = https://github.com/
+  insteadOf = https://github.com/
