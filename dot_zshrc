@@ -3,16 +3,10 @@ if [[ -z "$ZPROFILE_SOURCED" ]]; then
   source ~/.zprofile
 fi
 
-if [[ -z "$TERMINAL" ]]; then
+if [[ -n "$GIT_ASKPASS" ]]; then
   source ~/.bash_profile
   return
 fi
-
-if [[ -z "$GIT_ASKPASS" ]]; then
-  source ~/.bash_profile
-  return
-fi
-
 
 export LS_COLORS="$(vivid generate gruvbox-dark)"
 
