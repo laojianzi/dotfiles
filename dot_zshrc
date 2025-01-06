@@ -184,7 +184,6 @@ rm /tmp/gh_$$ &>/dev/null
 # remove watch on home directory
 watchman watch-del $HOME >/dev/null 
 figlet -w 80 CodeRabbit zsh
-cowsay -d "zsh exiting... see you later..."
 sleep 0.5
 }
 
@@ -614,15 +613,6 @@ if $ASCII_WELCOME_ENABLED; then
   else
     echo $(date +%s) > $HOME/.ascii_welcome_last_displayed
   fi
-fi
-
-# check whether ascii art is enabled
-if $ASCII_WELCOME_ENABLED; then
-  # print a random cowsay using fortune using only *.cow files located at $(brew --prefix)/share/cows
-  fortune | cowsay -f $(find $(brew --prefix)/share/cows/ -name "*.cow" | shuf -n 1)
-  (timeout 2 WTTR_PARAMS="1" ~/sw/bin/wttr.sh ;\
-    echo; echo -e "${CYAN_BRIGHT}  ==================================  GitHub Status ================================== ${RESET}"; echo;
-    timeout 2 gh status) 2&>/dev/null
 fi
 
 unset ASCII_WELCOME_ENABLED
